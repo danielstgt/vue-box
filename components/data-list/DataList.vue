@@ -67,7 +67,7 @@ export default {
 
     computed: {
         isSearching() {
-            return !! this.searchQuery;
+            return !! this.searchQuery || Object.keys(this.searchFilters).length;
         },
 
         hasNoSearchResults() {
